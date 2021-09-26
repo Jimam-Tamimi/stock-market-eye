@@ -45004,3 +45004,25 @@ ul.list-ckeck-soft {
 
 .wd-100v {
   width: 100vw; }
+
+
+.my-resp{
+  max-width: calc(100vw - 240px) !important;
+  overflow: hidden;
+}
+@media only screen and (max-width: 1200px){
+  
+.my-resp{
+  max-width: calc(100vw - 220px) !important;
+}
+}
+
+
+
+@media only screen and (max-width: 992px){
+  
+  .my-resp{
+    max-width: 100% !important;
+  }
+}
+

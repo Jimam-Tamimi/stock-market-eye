@@ -8,6 +8,7 @@ import Signup from "./pages/account/Signup";
 import ResetPassword from "./pages/account/ResetPassword";
 import Activate from "./pages/account/Activate";
 import Home from "./pages/dashboard/Home";
+import Portfolio from "./pages/dashboard/Portfolio";
 
 function App() {
   
@@ -16,13 +17,14 @@ function App() {
     <>
       <Layout>
         <PrivateRoute>
-          <Route path='/' component={Home} />
+          <Route exact path='/' component={Home} />
+          <Route exact path='/portfolio/:id/' component={Portfolio} />
 
         </PrivateRoute>
         <GuestRoute>
-          <Route path='/signup/' component={Signup} />
-          <Route path='/reset-password/' component={ResetPassword} />
-          <Route path='/activate/:uid/:token/' component={Activate} />
+          <Route exact path='/signup/' component={Signup} />
+          <Route exact path='/reset-password/' component={ResetPassword} />
+          <Route exact path='/activate/:uid/:token/' component={Activate} />
         </GuestRoute>
       </Layout>
     </>

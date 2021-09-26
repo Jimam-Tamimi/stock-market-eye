@@ -64,10 +64,12 @@ export default function Layout({children}) {
 
             <PrivateComponent>
                         <Dashboard  toggleDashOnSmallDevice={toggleDashOnSmallDevice} show={show} />
-                    <div className="az-content az-content-dashboard-five">
+                    <div  className="az-content az-content-dashboard-five my-resp" >
                         <Navbar  setDarkMode={setDarkMode} darkMode={darkMode} toggleDash={toggleDash} />
                         <Modals />
-                        {children}
+                        <div style={{margin: "20px"}}>
+                            {children}
+                        </div>
                     </div>
             </PrivateComponent>
             <GuestComponent>

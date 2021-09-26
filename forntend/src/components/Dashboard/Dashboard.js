@@ -32,13 +32,13 @@ export default function Dashboard() {
               </Link>
               <ul className="nav-sub">
                 <li className="nav-sub-item">
-                  <Link to="dashboard-ten.html" className="nav-sub-link">
+                  <Link to="/portfolio/1/" className="nav-sub-link">
                     Port 1
                   </Link>
-                  <Link to="dashboard-ten.html" className="nav-sub-link">
+                  <Link to="/portfolio/2/" className="nav-sub-link">
                     Port 2
                   </Link>
-                  <Link to="dashboard-ten.html" className="nav-sub-link">
+                  <Link to="/portfolio/3/" className="nav-sub-link">
                     Port 3
                   </Link>
                 </li>
