@@ -20,12 +20,13 @@ export default function Table() {
         });
 
         setRowData([
-            { "country": "Bangladesh", "gold": 'gold 1', "silver": 'silver 1', "bronze": 'bronze 1' },
-            { "country": "Bangladesh", "gold": 'gold 2', "silver": 'silver 2', "bronze": 'bronze 2' },
-            { "country": "Bangladesh", "gold": 'gold 3', "silver": 'silver 3', "bronze": 'bronze 3' },
-            { "country": "India", "gold": 'gold 4', "silver": 'silver 4', "bronze": 'bronze 4' },
-            { "country": "India", "gold": 'gold 5', "silver": 'silver 5', "bronze": 'bronze 5' },
-            { "country": "afgan", "gold": 'gold 6', "silver": 'silver 6', "bronze": 'bronze 6' },
+            { 
+                "country": "transaction.date", 
+                "gold": 'gold 1', 
+                "silver": 'silver 1', 
+                "bronze": 'bronze 1',
+            },
+             
         ]); 
     };
 
@@ -61,10 +62,38 @@ export default function Table() {
                     onColumnPinned={saveColumnState}
                     onExpandOrCollapseAll={saveColumnState}
                 >
-                    <AgGridColumn field="country" rowGroup={true} hide={true} />
-                    <AgGridColumn field="gold" />
-                    <AgGridColumn field="silver" />
-                    <AgGridColumn field="bronze" />
+                    <AgGridColumn field="Symbol" rowGroup={true} hide={true} />
+                    <AgGridColumn field="Name" />
+                    <AgGridColumn field="Quantity" />
+                    <AgGridColumn field="Price" />
+                    <AgGridColumn field="Adjusted Buy Price" />
+                    <AgGridColumn field="Current Value" />
+                    <AgGridColumn field="Profit" />
+                    <AgGridColumn field="Profit %" />
+                    <AgGridColumn field="Portfolio %" />
+                    <AgGridColumn field="Day Change" />
+                    <AgGridColumn field="Day Change %" />
+                    <AgGridColumn field="Day Lo" />
+                    <AgGridColumn field="Day Hi" />
+                    <AgGridColumn field="52 Week Lo" />
+                    <AgGridColumn field="52 Week Hi" />
+                    <AgGridColumn field="Volume" />
+                    <AgGridColumn field="Volume Average 10 days" />
+                    <AgGridColumn field="Volume Average 3M" />
+                    <AgGridColumn field="MktCap" />
+                    <AgGridColumn field="EPS" />
+                    <AgGridColumn field="P/E" />
+                    <AgGridColumn field="P/B" />
+                    <AgGridColumn field="EV/EBITDA" />
+                    <AgGridColumn field="Dividend Yield" />
+                    <AgGridColumn field="D/E" />
+                    <AgGridColumn field="ROE" />
+                    <AgGridColumn field="ROA" />
+                    <AgGridColumn field="Revenues" />
+                    <AgGridColumn field="EBITDA" />
+                    <AgGridColumn field="Sector" />
+                    <AgGridColumn field="Website" />
+                    <AgGridColumn field="symbol" />
                 </AgGridReact>
             </div>
         </div>
