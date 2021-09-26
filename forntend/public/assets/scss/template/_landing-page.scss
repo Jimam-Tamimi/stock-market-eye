@@ -1,0 +1,85 @@
+.landing-sass-header-content {
+    border-bottom-left-radius: 400px;
+    padding-bottom: 260px;
+    margin-bottom: -260px;
+}
+
+.landing-sass-header-img-wrapper {
+    margin-bottom: 85px;
+}
+
+.lead-landing-section {
+    padding-top: 105px;
+    padding-bottom: 110px;
+}
+
+.landing-sass-testimonial-carousel {
+    .carousel-control {
+        &-next, &-prev {
+            position: static;
+            width: auto;
+        }
+        &-prev{
+            margin-right: 16px;
+        }
+    }
+}
+
+.landing-business-media-list {
+    .list-item-number {
+        display: inline-flex;
+        width: 34px;
+        height: 34px;
+        align-items: center;
+        justify-content: center;
+        background-color: theme-color(info);
+        border-radius: 0.25rem;
+        color: $white;
+        font-size: 12px;
+        font-weight: $font-weight-bold;
+        line-height: 1.33;
+    }
+}
+
+.media-icon {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid $border-color;
+    color: theme-color(info);
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    img {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.landing-app-header {
+    background-color: #1565d8;
+    background-image: url('../../img/app-landing-page/bg.svg');
+    background-repeat: no-repeat;
+    background-position: 75% 50%;
+
+    &-content {
+        position: relative;
+        overflow: hidden;
+        padding-top: 110px;
+        &::after {
+            background: $white;
+            bottom: 0;
+            content: '';
+            display: block;
+            height: 50%;
+            left: 0;
+            position: absolute;
+            right: 0;
+            transform: skewY(-5.7deg)translateY(100%);
+            transform-origin: left top;
+        }
+    }
+}

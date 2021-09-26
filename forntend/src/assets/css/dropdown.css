@@ -1,0 +1,38 @@
+.dropdown-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    width: fit-content;
+
+}
+.dropdown-header:hover{
+    transform: scale(1.099);
+}
+
+.dropdown-header p {
+    margin: 0;
+    cursor: pointer;
+    margin-right: 3px;
+}
+
+
+.dropdown-div{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    width: max-content;
+    top: 51px;
+    left: 13px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #7987a1;
+}
+
+.dropdown-div.show{
+    opacity: 1; 
+    transform: scale(1);
+
+}
