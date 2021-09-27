@@ -47,14 +47,11 @@ export default function Table() {
                         <th>Name</th>
                         <th>Quantity</th>
                         <th>Price</th>
-
                         <th>Adjusted Buy Price</th>
                         <th>Current Value</th>
                         <th>Profit</th>
                         <th>Profit %</th>
                         <th>Portfolio %</th>
-
-
                         <th>Day Change</th>
                         <th>Day Change %</th>
                         <th>Day Lo</th>
@@ -63,9 +60,6 @@ export default function Table() {
                         <th>52 Week Hi</th>
                         <th>Volume</th>
                         <th>Volume Average 10 days</th>
-
-
-                        {/*                         
                         <th>Volume Average 3M</th>
                         <th>MktCap</th>
                         <th>EPS</th>
@@ -81,7 +75,7 @@ export default function Table() {
                         <th>Sector</th>
                         <th>Industry</th>
                         <th>Website</th>
-                        <th>symbol</th> */}
+                        <th>symbol</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -94,25 +88,19 @@ export default function Table() {
 
 
                         <td> transaction.cost </td>
-
-                        {/* <td class="tx-success"> transaction.current_value </td> */}
-
                         <td class="tx-danger"> transaction.current_value </td>
 
 
-                        {/* <td class="tx-success"> transaction.profit </td> */}
 
                         <td class="tx-danger"> transaction.profit </td>
 
 
                         <td class="tx-success"> transaction.profit_percentage </td>
 
-                        {/* <td class="tx-danger"> transaction.profit_percentage </td> */}
 
 
                         <td class="tx-success"> transaction.portfolio_percentage </td>
 
-                        {/* <td class="tx-danger"> transaction.portfolio_percentage </td> */}
 
 
                         <td> s.regularMarketChange </td>

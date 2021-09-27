@@ -45008,7 +45008,7 @@ ul.list-ckeck-soft {
 
 .my-resp{
   max-width: calc(100vw - 240px) !important;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 @media only screen and (max-width: 1200px){
   
