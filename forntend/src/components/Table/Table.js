@@ -92,28 +92,15 @@ export default function Table() {
     };
 
     const onFirstDataRendered = (params) => {
-        params.api.sizeColumnsToFit();
         applyColumnState(params)
+        params.api.sizeColumnsToFit();
 
     };
     const onGridSizeChanged = (params) => {
-        var gridWidth = document.getElementById('grid-wrapper').offsetWidth;
-        var columnsToShow = [];
-        var columnsToHide = [];
-        var totalColsWidth = 0;
-        var allColumns = params.columnApi.getAllColumns();
-        for (var i = 0; i < allColumns.length; i++) {
-          var column = allColumns[i];
-          totalColsWidth += column.getMinWidth();
-          if (totalColsWidth > gridWidth) {
-            columnsToHide.push(column.colId);
-          } else {
-            columnsToShow.push(column.colId);
-          }
-        }
         params.api.sizeColumnsToFit();
-        applyColumnState(params)
+
     };
+
 
     const saveColumnState = e => {
         localStorage.setItem('columnState', JSON.stringify(gridColumnApi.getColumnState()));
@@ -128,7 +115,7 @@ export default function Table() {
     const onQuickFilterChanged = () => {
         gridApi.setQuickFilter(document.getElementById('quickFilter').value);
       };
-    return (
+      return (
         <div style={{ width: '100%', height: '90vh' }}>
             <div id="grid-wrapper" style={{ width: '100%', height: '100%' }}>
                 <div>
@@ -165,11 +152,11 @@ export default function Table() {
                         onGridReady={onGridReady}
                         rowData={rowData}
                         onColumnMoved={saveColumnState}
-                        onColumnPinned={saveColumnState}
                         onColumnResized={saveColumnState}
                         onColumnPinned={saveColumnState}
                         onExpandOrCollapseAll={saveColumnState}
-
+                        onColumnVisible={saveColumnState}
+                        
                         onFirstDataRendered={onFirstDataRendered}
                         onGridSizeChanged={onGridSizeChanged}
                         rowSelection={'multiple'}
@@ -177,6 +164,7 @@ export default function Table() {
                         groupDisplayType={'singleColumn'}
 
 
+                        
                     >
                         <AgGridColumn field="Symbol" rowGroup={true} hide={true}  filter="agTextColumnFilter"   />
                         <AgGridColumn field="Name" filter="agTextColumnFilter"   />

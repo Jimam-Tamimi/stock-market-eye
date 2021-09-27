@@ -4,6 +4,37 @@ $(function(){
   // This template is mobile first so active menu in navbar
   // has submenu displayed by default but not in desktop
   // so the code below will hide the active menu if it's in desktop
+   
+
+  $('.az-sidebar .with-sub').on('click', function(e){
+    e.preventDefault();
+    $(this).parent().toggleClass('show');
+    $(this).parent().siblings().removeClass('show');
+  })
+
+  $(document).on('click touchstart', function(e){
+    e.stopPropagation();
+
+    // closing of sidebar menu when clicking outside of it
+    if(!$(e.target).closest('.az-header-menu-icon').length) {
+      var sidebarTarg = $(e.target).closest('.az-sidebar').length;
+      if(!sidebarTarg) {
+        $('body').removeClass('az-sidebar-show');
+      }
+    }
+  });
+
+
+  $('#azSidebarToggle').on('click', function(e){
+    e.preventDefault();
+
+    if(window.matchMedia('(min-width: 992px)').matches) {
+      $('.az-sidebar').toggle();
+    } else {
+      $('body').toggleClass('az-sidebar-show');
+    }
+  })
+
   if(window.matchMedia('(min-width: 992px)').matches) {
     $('.az-navbar .active').removeClass('show');
     $('.az-header-menu .active').removeClass('show');
