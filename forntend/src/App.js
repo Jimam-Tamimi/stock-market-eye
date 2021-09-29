@@ -10,6 +10,8 @@ import Activate from "./pages/account/Activate";
 import Home from "./pages/dashboard/Home";
 import Portfolio from "./pages/dashboard/Portfolio";
 
+
+
 function App() {
   
   
